@@ -26,7 +26,8 @@ jobs:
           commit-header: "[LeetCode Sync]"
 
       - name: Organize Solutions by Difficulty
-        run: python organize_leetcode.py
+        run: python .github/scripts/organize_leetcode.py
+
 
 
 
