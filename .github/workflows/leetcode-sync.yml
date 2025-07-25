@@ -1,14 +1,16 @@
 name: LeetCode Sync
 
 on:
-  workflow_dispatch:  # lets you run manually
+  workflow_dispatch:
   schedule:
-    - cron: '0 12 * * *'  # auto runs daily at 12PM UTC / 5:30PM IST
+    - cron: '0 12 * * *'
+
+permissions:
+  contents: write  # <== this line is the key
 
 jobs:
   sync:
     runs-on: ubuntu-latest
-
     steps:
       - name: Sync
         uses: joshcai/leetcode-sync@v1.7
