@@ -6,7 +6,7 @@ on:
     - cron: '0 12 * * *'
 
 permissions:
-  contents: write  # <== this line is the key
+  contents: write
 
 jobs:
   sync:
@@ -21,3 +21,9 @@ jobs:
           destination-folder: solutions
           verbose: true
           commit-header: "[LeetCode Sync]"
+
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Organize Solutions by Difficulty
+        run: python organize_leetcode.py
