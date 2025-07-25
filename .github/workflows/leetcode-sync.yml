@@ -12,7 +12,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code              # ✅ MOVE THIS TO THE TOP
+      - name: Check out code
         uses: actions/checkout@v3
 
       - name: Sync
@@ -27,3 +27,4 @@ jobs:
 
       - name: Organize Solutions by Difficulty
         run: python organize_leetcode.py
+
