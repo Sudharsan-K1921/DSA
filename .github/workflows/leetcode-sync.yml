@@ -16,7 +16,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           leetcode-csrf-token: ${{ secrets.LEETCODE_CSRF_TOKEN }}
           leetcode-session: ${{ secrets.LEETCODE_SESSION }}
-          user-slug: sudharsan_k19
           destination-folder: solutions
           verbose: true
           commit-header: "[LeetCode Sync]"
